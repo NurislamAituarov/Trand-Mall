@@ -9,7 +9,7 @@
     "dev": "export set NODE_ENV=development&&webpack",
     "build": "export set NODE_ENV=production&&webpack",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d path-to-your-build"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,15 @@
+@use 'global';
+@use 'fonts';
+@use 'header';
+@use 'main';
+@use 'mobile';
+@use 'popUp';
+@use 'footer';
+@import 'normalize.css';
+//@import "~bootstrap/scss/bootstrap";
+body {
+  background-color: rgb(97, 97, 97);
+  .container {
+    // background-image: url(../images/webpack.png);
+  }
+}

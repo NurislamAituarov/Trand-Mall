@@ -1,0 +1,75 @@
+$primaryColor: rgb(14, 0, 139);
+$secondaryColor: darkslategray;
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+h1 {
+  color: $primaryColor;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+p {
+  display: inline;
+}
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border: none;
+}
+div {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: white;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 500ms;
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade_filter {
+  animation-name: fade_filter;
+  animation-duration: 1000ms;
+}
+@keyframes fade_filter {
+  from {
+    opacity: 0.1;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://nurislamaituarov.github.io/Trand-Mall",
   "scripts": {
     "start": "set NODE_ENV=development&&webpack serve --open",
     "dev": "export set NODE_ENV=development&&webpack",
-    "build": "export set NODE_ENV=production&&webpack"
+    "build": "export set NODE_ENV=production&&webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",

@@ -1,32 +1,30 @@
 const itemBlock = document.querySelectorAll('.main__content_item');
 // lazy image=================================
 
-const options = {
-  root: null,
-  threshold: 0.1,
-};
+// const options = {
+//   root: null,
+//   threshold: 0.1,
+// };
 
-function handleImg(myImg, observer) {
-  myImg.forEach((myImgSingle) => {
-    console.log(myImgSingle.intersectionRatio);
+// function handleImg(myImg, observer) {
+//   myImg.forEach((myImgSingle) => {
+//     if (myImgSingle.intersectionRatio > 0) {
+//       loadImage(myImgSingle.target);
+//     }
+//   });
+// }
 
-    if (myImgSingle.intersectionRatio > 0) {
-      loadImage(myImgSingle.target);
-    }
-  });
-}
+// function loadImage(image) {
+//   // image.src = image.getAttribute('data');
+// }
 
-function loadImage(image) {
-  // image.src = image.getAttribute('data');
-}
+// const observer = new IntersectionObserver(handleImg, options);
 
-const observer = new IntersectionObserver(handleImg, options);
+// itemBlock.forEach((el) => {
+//   const img = el.children[0];
 
-itemBlock.forEach((el) => {
-  const img = el.children[0];
-
-  observer.observe(img);
-});
+//   observer.observe(img);
+// });
 
 // ===============================================
 

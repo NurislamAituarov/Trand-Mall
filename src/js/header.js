@@ -1,17 +1,9 @@
 const popUpLiButton = document.querySelectorAll('.popUpLi'),
   popUpLi = document.querySelectorAll('.header__select_li'),
-  arrow = document.querySelectorAll('[alt="arrow"]'),
+  arrow = document.querySelectorAll('.arrow'),
   inputWrapper = document.querySelector('.header__filter_search'),
   input = document.querySelector('[placeholder="Arizzo"]');
 
-// window.addEventListener('click', (e) => {
-//   popUpLiButton.forEach((el) => {
-//     if (el !== e.target) {
-//       popUpLi.forEach((el) => (el.style.display = 'none'));
-//       arrow.forEach((el) => (el.style.transform = 'rotate(0deg)'));
-//     }
-//   });
-// });
 let trigger = '';
 
 popUpLiButton.forEach((item, i) => {
@@ -41,14 +33,4 @@ popUpLiButton.forEach((item, i) => {
   }
 
   item.addEventListener('click', showCategoryLi);
-  // item.addEventListener('focus', showCategoryLi);
-  // item.addEventListener('mouseleave', () => {
-  //   popUpLi.forEach((el) => (el.style.display = 'none'));
-  //   arrow.forEach((el) => (el.style.transform = 'rotate(0deg)'));
-  //   trigger = '';
-  // });
 });
-
-document.cookie = 'data=12';
-document.cookie = 'nurislam = true';
-console.log(document.cookie);

@@ -171,7 +171,7 @@
       color: rgba(244, 78, 81, 1);
     }
   }
-  [alt='heart'] {
+  .item-like {
     position: absolute;
     right: 15px;
     top: 15px;
@@ -199,7 +199,7 @@
     width: 110px;
     span {
       font-weight: 600;
-      transition: 0.3s;
+      transition: 0.1s;
     }
     span:nth-child(1),
     span:nth-child(5) {
@@ -224,8 +224,14 @@
     p {
       margin: 0;
     }
-    img {
-      margin-left: 15px;
+    svg {
+      margin-left: 20px;
+    }
+    @media (max-width: 468px) {
+      svg {
+        width: 15px;
+        height: 15px;
+      }
     }
   }
   .item__cart:hover {

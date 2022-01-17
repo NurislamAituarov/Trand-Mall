@@ -121,10 +121,20 @@ entry.addEventListener('click', () => {
 });
 
 ///////////////////////SUBMIT=========================================
+const cookieRemember = getCookie('remember');
+const cookieEmail = getCookie('email');
 
 const p = document.createElement('p');
 p.innerHTML = 'Выйти';
 p.style.marginLeft = '10px';
+
+if (cookieRemember === 'true') {
+  entry.innerHTML = `${cookieEmail.toUpperCase()}`;
+  clearTimeout(timer);
+  entryBlock.append(p);
+} else {
+  p.remove();
+}
 
 let date = new Date(Date.now() + 86400e3);
 date = date.toUTCString();
@@ -191,16 +201,6 @@ function getCookie(name) {
   var value = '; ' + document.cookie;
   var parts = value.split('; ' + name + '=');
   if (parts.length == 2) return parts.pop().split(';').shift();
-}
-const cookieRemember = getCookie('remember');
-const cookieEmail = getCookie('email');
-
-if (cookieRemember === 'true') {
-  entry.innerHTML = `${cookieEmail.toUpperCase()}`;
-  clearTimeout(timer);
-  entryBlock.append(p);
-} else {
-  p.remove();
 }
 
 p.addEventListener('click', () => {

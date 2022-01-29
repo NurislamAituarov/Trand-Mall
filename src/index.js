@@ -4,6 +4,20 @@ import './js/main';
 import './js/hamburger';
 import './js/popUp';
 import './js/item-block';
+import './styles/loader.css';
+
+window.addEventListener('load', () => {
+  document.querySelector('.lds-roller').style.display = 'none';
+  console.log('DOMContentLoaded');
+  document.querySelector('.container').style.display = '';
+
+  //   import('./styles/index.scss');
+  //   import('./js/header');
+  //   import('./js/main');
+  //   import('./js/hamburger');
+  //   import('./js/popUp');
+  //   import('./js/item-block');
+});
 // import $ from 'jquery';
 // import 'bootstrap';
 
@@ -11,13 +25,3 @@ import './js/item-block';
 //   language: 'JavaScript',
 //   framework: 'Angular',
 // };
-
-// const user = {
-//   name: 'Vitalij',
-//   age: '37',
-//   ...userStack,
-// };
-
-// $('.block').html('jQuery is working');
-
-// console.log(user);

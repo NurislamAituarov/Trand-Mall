@@ -1,4 +1,5 @@
-const itemBlock = document.querySelectorAll('.main__content_item');
+const itemBlock = document.querySelectorAll('.main__content_item'),
+  itemBlockTitle = document.querySelector('.main__content_title');
 // lazy image=================================
 
 // const options = {
@@ -68,6 +69,8 @@ itemBlock.forEach((item) => {
   item.addEventListener('mouseenter', () => {
     item.children[0].style.height = `${sizeMin}px`;
     item.append(div);
+    // itemBlockTitle.classList.add('show__title');
+    // itemBlockTitle.append(div);
   });
   item.addEventListener('mouseleave', () => {
     item.children[0].style.height = `${sizeMax}px`;
